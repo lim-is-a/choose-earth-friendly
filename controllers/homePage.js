@@ -16,9 +16,9 @@ const express = require('express')
  * 
  */
 // const templateModel = require('../models/template.js')
-const Clothes = require('../models/schemas.js')
-const Shoes = require('../models/schemas.js')
-const Restaurants = require('../models/schemas.js')
+const Clothes = require('../models/ModelSchemas')
+const Shoes = require('../models/ModelSchemas')
+const Restaurants = require('../models/ModelSchemas')
 
 
 /* Step 3 

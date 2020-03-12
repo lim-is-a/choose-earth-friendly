@@ -42,7 +42,7 @@ export default class HelloWorld extends Component {
         return (
             <div>
                 {/* Accessing the value of message from the state object */}
-                <h1>HelloWorld</h1>
+                <h1>{this.state.message}</h1>
             </div>
         )
     }
