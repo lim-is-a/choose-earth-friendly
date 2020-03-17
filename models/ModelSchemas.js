@@ -18,17 +18,17 @@ const mongoose = require('./connection.js')
 //const SampleModelSchema = new mongoose.Schema({
 //  name: String
 //})
-const ClothesSchema = new mongoose.Schema({
+const Clothes = new mongoose.Schema({
     name: String,
     description: String,
     url: String,
 })
-const ShoesSchema = new mongoose.Schema({
+const Shoes = new mongoose.Schema({
     name: String,
     description: String,
     url: String,
 })
-const RestaurantsSchema = new mongoose.Schema({
+const Restaurants = new mongoose.Schema({
     name: String,
     description: String,
     url: String,
@@ -39,6 +39,6 @@ const RestaurantsSchema = new mongoose.Schema({
  * TODO: export the schema
  */
 //module.exports = mongoose.model('Sample', SampleModelSchema);
-module.exports = mongoose.model('Clothes', ClothesSchema);
-module.exports = mongoose.model('Shoes', ShoesSchema);
-module.exports = mongoose.model('Restaurants', RestaurantsSchema);
+module.exports = mongoose.model('Clothes', Clothes);
+module.exports = mongoose.model('Shoes', Shoes);
+module.exports = mongoose.model('Restaurants', Restaurants);
