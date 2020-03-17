@@ -23,16 +23,6 @@ const Clothes = new mongoose.Schema({
     description: String,
     url: String,
 })
-const Shoes = new mongoose.Schema({
-    name: String,
-    description: String,
-    url: String,
-})
-const Restaurants = new mongoose.Schema({
-    name: String,
-    description: String,
-    url: String,
-})
 
 /* Step 3
  *
@@ -40,5 +30,3 @@ const Restaurants = new mongoose.Schema({
  */
 //module.exports = mongoose.model('Sample', SampleModelSchema);
 module.exports = mongoose.model('Clothes', Clothes);
-module.exports = mongoose.model('Shoes', Shoes);
-module.exports = mongoose.model('Restaurants', Restaurants);
