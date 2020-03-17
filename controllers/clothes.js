@@ -41,6 +41,7 @@ const clothesRouter = express.Router()
 // #SHOW
 clothesRouter.get('/:clothesId', (req, res) => {
   Clothes.findById(req.params.clothesId).then((clothes) => {
+    console.log("Looking at " + clothesId )
     res.json(clothes)
   })
 })

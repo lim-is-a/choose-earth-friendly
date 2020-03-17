@@ -40,8 +40,9 @@ const shoesRouter = express.Router()
 
 // -----------------SHOES---------------------
 // #SHOW
-shoesRouter.get('/:shoesId', (req, res) => {
+shoesRouter.get('/:shoeId', (req, res) => {
   Shoes.findById(req.params.shoesId).then((shoes) => {
+    console.log("Looking at " + shoeId)
     res.json(shoes)
   })
 })
@@ -52,20 +53,21 @@ shoesRouter.post('/', (req, res) => {
   })
 })
 // #UPDATE
-shoesRouter.put('/:shoesId', (req, res) => {
-  Shoes.findByIdAndUpdate(req.params.shoesId, req.body).then(() => {
+shoesRouter.put('/:shoeId', (req, res) => {
+  Shoes.findByIdAndUpdate(req.params.shoeId, req.body).then(() => {
     res.status(200).end()
   })
 })
 // #DELETE
-shoesRouter.delete('/:shoesId', (req, res) => {
-  Shoes.findByIdAndRemove(req.params.shoesId).then(() => {
+shoesRouter.delete('/:shoeId', (req, res) => {
+  Shoes.findByIdAndRemove(req.params.shoeId).then(() => {
     res.status(200).end()
   })
 })
 // #INDEX
 shoesRouter.get('/', (req, res) => {
   Shoes.find().then((shoes) => {
+    console.log(shoes)
     res.json(shoes)
   })
 })

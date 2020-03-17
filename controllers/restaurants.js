@@ -43,6 +43,7 @@ const restaurantsRouter = express.Router()
 // #SHOW
 restaurantsRouter.get('/:restaurantId', (req, res) => {
   Restaurants.findById(req.params.restaurantId).then((restaurants) => {
+    console.log("Looking at " + restaurantId)
     res.json(restaurants)
   })
 })
@@ -67,6 +68,7 @@ restaurantsRouter.delete('/:restaurantId', (req, res) => {
 // #INDEX
 restaurantsRouter.get('/', (req, res) => {
   Restaurants.find().then((restaurants) => {
+    console.log(restaurants)
     res.json(restaurants)
   })
 })
