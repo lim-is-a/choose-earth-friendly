@@ -17,9 +17,9 @@ const app = express()
  *
  */
 // const { templateRouter } = require('./controllers/template.js')
-const { shoesRouter } = require('./controllers/homePage.js')
-const { clothesRouter } = require('./controllers/homePage.js')
-const { restaurantsRouter } = require('./controllers/homePage.js')
+const { shoesRouter } = require('./controllers/shoes.js')
+const { clothesRouter } = require('./controllers/clothes.js')
+const { restaurantsRouter } = require('./controllers/restaurants.js')
 
 
 /* Step 3
@@ -53,9 +53,9 @@ app.use(express.static(`${__dirname}/client/build`))
  * the paths defined in the router.
  */
 // app.use('/api/helloworld', templateRouter)
-app.use('/api/earthFriendly', shoesRouter)
-app.use('/api/earthFriendly', clothesRouter)
-app.use('/api/earthFriendly', restaurantsRouter)
+app.use('/api/earthFriendly/shoes', shoesRouter)
+app.use('/api/earthFriendly/clothes', clothesRouter)
+app.use('/api/earthFriendly/restaurants', restaurantsRouter)
 
 /* Step 5
  *
