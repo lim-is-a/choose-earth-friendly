@@ -17,7 +17,9 @@ const app = express()
  *
  */
 // const { templateRouter } = require('./controllers/template.js')
-const { homeRouter } = require('./controllers/homePage.js')
+const { shoesRouter } = require('./controllers/homePage.js')
+const { clothesRouter } = require('./controllers/homePage.js')
+const { restaurantsRouter } = require('./controllers/homePage.js')
 
 
 /* Step 3
@@ -51,7 +53,9 @@ app.use(express.static(`${__dirname}/client/build`))
  * the paths defined in the router.
  */
 // app.use('/api/helloworld', templateRouter)
-app.use('/api/earthFriendly', homeRouter)
+app.use('/api/earthFriendly', shoesRouter)
+app.use('/api/earthFriendly', clothesRouter)
+app.use('/api/earthFriendly', restaurantsRouter)
 
 /* Step 5
  *
@@ -68,7 +72,7 @@ app.get('/*', (req, res) => {
  *
  * NOTE: keep these lines at the bottom of the file 
  */
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3002
 
 /* Step 7
  *
