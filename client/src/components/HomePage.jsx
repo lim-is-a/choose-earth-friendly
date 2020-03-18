@@ -53,15 +53,15 @@ export default class HomePage extends Component {
                     <h1>Choose Earth Friendly!</h1>
                 </div>
                 {(this.state.clothesList.length > 0)
-                    ? <Clothes/>
+                    ? <Clothes clothesList={this.state.clothesList}/>
                     : null
                 }
                 {(this.state.shoesList.length > 0)
-                    ? <Shoes/>
+                    ? <Shoes shoesList={this.state.shoesList}/>
                     : null
                 }
                 {(this.state.restaurantsList.length > 0)
-                    ? <Restaurants/>
+                    ? <Restaurants restaurantsList={this.state.restaurantsList}/>
                     : null
                 }
             </div>
