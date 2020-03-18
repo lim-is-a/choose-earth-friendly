@@ -5,19 +5,19 @@ body{
   background-color: #282c34;
   color: white;
 }
-nav{
-  
+/* nav{
   width: 300px;
   height: 600px;
   text-align: center;
   background-color: #5d6679;
   margin-left: 20px;
 }
+
 nav a{
   color: rgb(238, 229, 146);
   display: block;
   padding: 40px 6px;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
