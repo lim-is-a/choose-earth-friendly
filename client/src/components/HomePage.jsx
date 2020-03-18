@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 
 export default class HomePage extends Component {
@@ -29,6 +28,7 @@ export default class HomePage extends Component {
             <div>
                 <h1>Welcome to Choose Earth Friendly!</h1>
                 <nav>
+                    <a href="/">Home</a>
                     <a href="/clothes">Clothes</a>
                     <a href="/shoes">Shoes</a>
                     <a href="/restaurants">Restaurants</a>
