@@ -9,7 +9,8 @@ export default class HomePage extends Component {
     state = {
         clothesList: [],
         shoesList: [],
-        restaurantsList: []
+        restaurantsList: [],
+        redirect: false
     }
 
     getClothes = () => {
@@ -21,6 +22,7 @@ export default class HomePage extends Component {
             })
         })
     }
+
     getShoes = () => {
         axios.get('/api/earthfriendly/shoes').then((response) => {
             this.setState({
@@ -53,7 +55,7 @@ export default class HomePage extends Component {
                     <h1>Choose Earth Friendly!</h1>
                 </div>
                 {(this.state.clothesList.length > 0)
-                    ? <Clothes clothesList={this.state.clothesList}/>
+                    ? <Clothes clothesList={this.state.clothesList} delete={this.deleteClothesStore}/>
                     : null
                 }
                 {(this.state.shoesList.length > 0)

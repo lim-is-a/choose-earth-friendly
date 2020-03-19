@@ -13,9 +13,6 @@ export default class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            {/* <Route exact path="/clothes" component={Clothes} />
-            <Route exact path="/restaurants" component={Restaurants} />
-            <Route exact path="/shoes" component={Shoes} /> */}
           </Switch>
         </Router>
       </div>
