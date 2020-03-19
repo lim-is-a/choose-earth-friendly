@@ -33,18 +33,13 @@ export default class OneClothingShop extends Component {
         })
     }
 
-    submitCreateForm = (event) => {
+    submitEditForm = (event) => {
         // event.preventDefault();
         axios.put(`/api/earthfriendly/clothes/${this.props.id}`, this.state.updatedStore).then(() => {
             this.setState({
                 redirect: true
             })
         })
-
-        // axios.post('/api/creatures', this.state.newCreature).then(() => {
-        //     this.toggleCreateForm();
-        //     this.getCreatures();
-        // });
     }
 
     render() {
@@ -54,7 +49,7 @@ export default class OneClothingShop extends Component {
         return (
             <div>
                 {this.state.editClicked 
-                    ? <form onSubmit={this.submitCreateForm}>
+                    ? <form onSubmit={this.submitEditForm}>
                         <div>
                             Name: <input name="name" type="text" onChange={this.updateStore}></input>
                         </div>

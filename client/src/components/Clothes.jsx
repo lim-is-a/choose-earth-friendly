@@ -4,10 +4,32 @@ import axios from 'axios'
 
 export default class Clothes extends Component {
     state = {
-        addClothesShopForm : false
+        addClothesClicked: false,
+        newStore: {
+            name: "",
+            description: "",
+            url: ""
+        }
     }
-    addClothesShop = ()=>{
+
+    addClothesStore = () => {
+        this.setState({
+            addClothesClicked: true
+        })
     }
+
+    changeInput = (event) => {
+        const newStoreCopy = {...this.state.newStore}
+        newStoreCopy[event.target.name] = event.target.value;
+        this.setState({
+            newStore: newStoreCopy
+        })
+    }
+
+    submitCreateForm = () => {
+        axios.post('/api/earthfriendly/clothes', this.state.newStore)
+    }
+
     render() {
         return (
             <div>
@@ -15,17 +37,26 @@ export default class Clothes extends Component {
                 {
                     this.props.clothesList.map((oneResult, i) => {
                         return <div>
-                                    <OneClothingShop id={oneResult._id} name={oneResult.name}
-                                    description={oneResult.description} url={oneResult.url} delete={this.props.delete} key={i} />
-                                </div>
+                            <OneClothingShop id={oneResult._id} name={oneResult.name}
+                                description={oneResult.description} url={oneResult.url} delete={this.props.delete} key={i} />
+                        </div>
                     })
                 }
-                <button>Add Earth Friendly Clothes Shop</button>
-                {this.state.addClothesShopForm
-                    ? <form >
-                        <input type="text"/>
-                    </form>
-                    :null
+                <button onClick={() => {this.addClothesStore()}}>Add Earth Friendly Clothes Shop</button>
+                {this.state.addClothesClicked
+                    ? <form onSubmit={this.submitCreateForm}>
+                    <div>
+                        Name: <input name="name" type="text" onChange={this.changeInput}></input>
+                    </div>
+                    <div>
+                        Description: <input name="description" type="text" onChange={this.changeInput}></input>
+                    </div>
+                    <div>
+                        Url: <input name="url" type="text" onChange={this.changeInput}></input>
+                    </div>
+                        <input type="submit" value="Submit"/>
+                </form>
+                    : null
                 }
             </div>
         )
