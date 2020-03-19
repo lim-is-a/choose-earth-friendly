@@ -1,31 +1,14 @@
-# mern-template-project
+# Choose Earth-Friendly App
 
-# Setup A New Project From This Template
+### mern-template-project
 
-If you are starting a new project do the following:
+More people have been making a move to becoming earth-friendly for multiple reasons. Although it is increasing in popularity, it is still a bit challenging to go on the search for stores or restaurants that are completely earth-friendly or offer earth-friendly products.
 
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `npm run dev`
-1. Open a new browser window and navigate to the URL http://localhost:3000/
-    here you should see `hello world` displayed after page load
-    updates should show up here automatically
-1. see the `client/src` `readme.md` file for more information on the react project
+This is an app designed to facilitate the transition into this new lifestyle or simply seeking more earth-friendly resources. 
 
-# Setup A New Project Without This Template
-
-If you want to start a project without using this template directory do the
-following:
-
-
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
+1. Link to [Heroku Deployed App]()
+1. Link to [Trello](https://trello.com/b/jfZJXyEp/project-3-choose-vegan-mern-app)
+1. ERD:
+![]()
+1. WireFrames:
+![]()
