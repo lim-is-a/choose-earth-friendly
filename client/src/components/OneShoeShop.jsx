@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
 
-export default class OneShoesShop extends Component {
+export default class OneShoeShop extends Component {
     state = {
         updatedStore: {
             name: "",
