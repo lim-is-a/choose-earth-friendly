@@ -6,9 +6,6 @@ More people have been making a move to becoming earth-friendly for multiple reas
 
 This is an app designed to facilitate the transition into this new lifestyle or simply seeking more earth-friendly resources. 
 
-1. Link to [Deployed Heroku App.]()
-
-1. Link to [Trello Board.](https://trello.com/b/jfZJXyEp/project-3-choose-earth-friendly-mern-app)
 
 1. ERD:
 ![App ERD image](client/public/images/ERDimage.png)
@@ -16,3 +13,7 @@ This is an app designed to facilitate the transition into this new lifestyle or 
 1. WireFrames:
 ![Wireframe image 1](client/public/images/Wireframe1.png)
 ![Wireframe image 2](client/public/images/Wireframe2.png)
+
+1. Link to [Trello Board.](https://trello.com/b/jfZJXyEp/project-3-choose-earth-friendly-mern-app)
+
+1. Link to [Deployed Heroku App.](https://choose-earth-friendly-pr3.herokuapp.com/)
