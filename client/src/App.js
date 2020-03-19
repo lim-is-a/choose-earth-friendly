@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
 import HomePage from './components/HomePage.jsx'
-import Clothes from './components/Clothes'
-import Restaurants from './components/Restaurants'
-import Shoes from './components/Shoes'
 
 export default class App extends Component {
   render() {

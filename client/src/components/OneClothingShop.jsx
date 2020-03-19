@@ -4,12 +4,18 @@ import { Redirect } from 'react-router-dom';
 
 export default class OneClothingShop extends Component {
     state = {
-        updatedStore: {},
+        updatedStore: {
+            name: "",
+            description: "",
+            url: ""
+        },
         editClicked: false
     }
 
-    editStore = ()=>{
-        axios.put(`/api/earthfriendly/clothes/${this.props.id}`)
+    editStore = () => {
+        this.setState({
+            editClicked: !this.state.editClicked
+        })
     }
 
     deleteClothesStore = (id) => {
@@ -19,20 +25,57 @@ export default class OneClothingShop extends Component {
             })
         })
     }
-    
-    
+    updateStore = (event)=>{
+        const updatedStoreCopy = {...this.state.updatedStore}
+        updatedStoreCopy[event.target.name] = event.target.value
+        this.setState({
+            updatedStore: updatedStoreCopy
+        })
+    }
+
+    submitCreateForm = (event) => {
+        // event.preventDefault();
+        axios.put(`/api/earthfriendly/clothes/${this.props.id}`, this.state.updatedStore).then(() => {
+            this.setState({
+                redirect: true
+            })
+        })
+
+        // axios.post('/api/creatures', this.state.newCreature).then(() => {
+        //     this.toggleCreateForm();
+        //     this.getCreatures();
+        // });
+    }
+
     render() {
         if (this.state.redirect) {
-            return <Redirect to="/"/>;
+            return <Redirect to="/" />;
         }
         return (
             <div>
-                face: {this.props.id}
-                Name: {this.props.name}
-                Description:{this.props.description}
-                Url:{this.props.url}
-                <button>Edit</button>
-                <button onClick={ () => {this.deleteClothesStore(this.props.id)}}>Delete</button>
+                {this.state.editClicked 
+                    ? <form onSubmit={this.submitCreateForm}>
+                        <div>
+                            Name: <input name="name" type="text" onChange={this.updateStore}></input>
+                        </div>
+                        <div>
+                            Description: <input name="description" type="text" onChange={this.updateStore}></input>
+                        </div>
+                        <div>
+                            Url: <input name="url" type="text" onChange={this.updateStore}></input>
+                        </div>
+                            <input type="submit" value="Submit"/>
+                    </form>
+                    :<div>
+                        <div>Name: {this.props.name}</div>
+                        <div>Description:{this.props.description}</div>
+                        <div>Url:{this.props.url}</div>
+                    </div>
+                }                
+
+
+                <button onClick={() => { this.editStore()}}>Edit</button>
+                <button onClick={() => { this.deleteClothesStore(this.props.id) }}>Delete</button>
             </div>
         )
     }
