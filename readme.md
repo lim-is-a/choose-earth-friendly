@@ -16,4 +16,4 @@ This is an app designed to facilitate the transition into this new lifestyle or 
 
 1. Link to [Trello Board.](https://trello.com/b/jfZJXyEp/project-3-choose-earth-friendly-mern-app)
 
-1. Link to [Deployed Heroku App.](https://choose-earth-friendly-pr3.herokuapp.com/)
+1. Link to [Deployed Heroku App.](https://fitness-challenge-pr4.herokuapp.com/)
